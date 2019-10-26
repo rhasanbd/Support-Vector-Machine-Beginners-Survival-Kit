@@ -12,7 +12,7 @@ The goal of the large margin SVM classifier is to maximize the margin between tw
 
 Hence the SVM classification can be modeled as a constrained maximization problem.
 
-Depending on the nature of the data, the SVM constrained maximization algorithm would vary.
+Depending on the nature of the data, the SVM constrained maximization algorithm varies.
 
 To understand different SVM algorithms and approaches, we will consider several cases in this notebook series on SVM.
 
@@ -28,7 +28,7 @@ To understand different SVM algorithms and approaches, we will consider several 
 
 ## Index for the Notebook Series on SVM Classifier
 
-There will be 5 notebooks on SVM based classifiers.
+There are 5 notebooks on SVM based classifiers.
 
 1. Support Vector Machine-1-Linearly Separable Data
         -- Hard margin & soft margin classifier using the LinearSVC model
@@ -41,8 +41,6 @@ Finally, we will apply SVM on **two application scenarios**. We will see that th
 - Application 1 - Image Classification (Gaussian RBF model performs well & why)
 - Application 2 - Text Classification (LinearSVC performs well & why)
 
-
-In this notebook we will investigate the Support Vector Machine (SVM) algorithm in the context of **linearly separable** data. Our goal is to develop a mathematical understanding of the SVM algorithm.
 
 
 ## Mathematical Foundation of SVM
@@ -105,10 +103,6 @@ The complexity of the dual problem depends on the size of the training data (N),
 
 
 
-##### Since we are using linearly separable data in this notebook, we will not have to solve the dual version of the problem. This knowledge will be useful for setting the "dual" hyperparameter.
-
-
-
 ## Unconstrained Optimization Problem for Gradient Descent
 
 We can implement the gradient descent (GD) or stochastic gradient descent (SGD) or coordinate descent (CD) based approach to find optimal $\vec{w}$ and $b$ for the SVM classsifier. The SGD aproach is useful for **online learning**.
@@ -126,7 +120,7 @@ Here:
 
 The Hinge loss function varies between 0 and $(1 - y_i(\vec{w}^T.\vec{x}_i + b))$. It represents the error/loss due to misclassification.
 
-<img src="https://cse.unl.edu/~hasan/SVM1.png",width=400,height=200>
+<img src="https://cse.unl.edu/~hasan/SVM1.png" width=400 height=200>
 
 Observe that the Hinge loss or cost function of SVM is similar to the Linear Regression and Logistic Regression regularized cost function.
 
