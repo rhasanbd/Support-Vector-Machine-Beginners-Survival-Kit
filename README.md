@@ -88,8 +88,7 @@ https://cvxopt.org/
 
 Due to the computational complexity of the primal optimization (minimization) problem, we transform it into a form such that its complexity no more depends on the feature dimension, instead depends on the size of the data. This new form is known as the dual form and we solve the **dual optimization (maximization) problem**.
 
-$max_{\alpha_1, ..\alpha_N} \sum_{i=1}^{N}\alpha_i 
-- \frac{1}{2}\sum_{i=1}^{N}\sum_{j=1}^{N} \alpha_i \alpha_j y_i y_j \vec{x_i}^T.\vec{x_j} $
+$max_{\alpha_1, ..\alpha_N} \sum_{i=1}^{N}\alpha_i - \frac{1}{2}\sum_{i=1}^{N}\sum_{j=1}^{N} \alpha_i \alpha_j y_i y_j \vec{x_i}^T.\vec{x_j} $
 
 Subject to the constraints:
 
@@ -110,8 +109,7 @@ We can implement the gradient descent (GD) or stochastic gradient descent (SGD) 
 To apply these iterative optimazation approaches for the SVM, we define the cost function as follows.
 
 
-$min_{\vec{w},b}\frac{1}{2}\vec{w}^T.\vec{w} 
-+ C\sum_{i=1}^{N}h(y_i(\vec{w}^T.\vec{x}_i + b)) $
+$min_{\vec{w},b}\frac{1}{2}\vec{w}^T.\vec{w} + C\sum_{i=1}^{N}h(y_i(\vec{w}^T.\vec{x}_i + b)) $
 
 
 Here:
