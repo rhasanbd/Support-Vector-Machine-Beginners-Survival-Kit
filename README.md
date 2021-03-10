@@ -2,7 +2,7 @@ If github in unable to render a Jupyter notebook, copy the link of the notebook 
 
 # Support Vector Machine (SVM) Classification: Linearly Separable Data
 
-SVM is a discriminative learning algorithm that makes an **assumption on the form of the discriminant (decision boundary)** between the classes.
+SVM is a discriminative learning modek that makes an **assumption on the form of the discriminant (decision boundary)** between the classes.
 
 In a binary classification problem, the form of the SVM discriminant function is modeled by the **widest possible boundary** between the classes. That's why SVM is known as **large margin classifier**. 
 
@@ -10,16 +10,19 @@ The goal of the large margin SVM classifier is to maximize the margin between tw
     
     -- The margin should be maximized while making sure that data are correctly classified (i.e., data belonging to two classes are off the margin).
 
-Hence the SVM classification can be modeled as a constrained maximization problem.
+Hence the SVM classification problem can be modeled as a constrained maximization problem.
 
 Depending on the nature of the data, the SVM constrained maximization algorithm varies.
 
 To understand different SVM algorithms and approaches, we will consider several cases in this notebook series on SVM.
 
 - Linearly Separable Data
+        
         -- No Outlier
         -- Outlier
+
 - Linearly Non-Separable Data
+        
         -- Feature Augmentation
         -- Kernelized SVM: Polynomial Kernel
         -- Kernelized SVM: Gaussian Radial Basis Function (RBF) Kernel
@@ -31,15 +34,22 @@ To understand different SVM algorithms and approaches, we will consider several 
 There are 5 notebooks on SVM based classifiers.
 
 1. Support Vector Machine-1-Linearly Separable Data
+        
         -- Hard margin & soft margin classifier using the LinearSVC model
+
 2. Support Vector Machine-2-Nonlinear Data
+        
         -- Polynomial models with LinearSVC and Kernelized SVM (Polynomial & Gaussian RBF kernel)
+
 3. Support Vector Machine-3-Gaussian RBF Kernel
+        
         -- In depth investigation of Gaussian RBF Kernel (how to fine tune the hyperparameters)
 
 Finally, we will apply SVM on **two application scenarios**. We will see that these two applications require two very different SVM algorithms (linear and complex models). We will conduct in dept investigations on these two models in the context of these two applications.
-- Application 1 - Image Classification (Gaussian RBF model performs well & why)
-- Application 2 - Text Classification (LinearSVC performs well & why)
+
+4. Application 1 - Image Classification (Gaussian RBF model performs well & why)
+
+5. Application 2 - Text Classification (LinearSVC performs well & why)
 
 
 
@@ -48,13 +58,16 @@ Finally, we will apply SVM on **two application scenarios**. We will see that th
 There are at least two very different ways to find the maximum margin decision boundary.
 
 - Modeling the max margin problem as a constrained optimization problem and solove it using Quadratic Programming (QP) solver
+
 - Modeling the max margin problem as an unconstrained optimization problem and solve it using Gradient Descent/coordinate descent 
 
 
 ### Constrained Optimization Problem
 
 We can model the max margin problem as a constrained optimization problem in two ways.
+
 - Primal Problem (computationally expensive for large feature dimension)
+
 - Dual Problem
 
 
@@ -130,6 +143,7 @@ Unlike Linear/Logistic regression, the regularization/penalty parameter (C) is w
 
 
 It's a hyperparameter that controls the trade-off between margin maximization and error minimization.
+     
      - If C is too large, we have a high penalty for nonseparable points, and we may store many support vectors and overfit. 
      - If C is too small, we may find too simple solutions that underfit. 
      
@@ -141,8 +155,11 @@ It's a hyperparameter that controls the trade-off between margin maximization an
 Scikit-Learn provides four SVM models to perform classification:
 
 - SVC (Solves the dual optimization problem. Used to implement kernelized SVM, such as polynomial kernel, Gaussian Radial Basis Function or RBF kernel)
+
 - LinearSVC (Uses the Coordinate Descent approach. Similar to SVC with linear kernel)
+
 - NuSVC (Nu-Support Vector Classification. Similar to SVC but uses a parameter to control the number of support vectors)
+
 - SGDClassifier (Uses Stochastic Gradient Descent approach)
 
 We will investigate both SVC and LinearSVC in greater detail. Also for the image classsification application we will use the SGDClasssifier.
@@ -152,6 +169,7 @@ We will investigate both SVC and LinearSVC in greater detail. Also for the image
 
 
 - SVC: $O(N^2d)$ ~ $O(N^3d)$
+
 - LinearSVC: $O(Nd)$ 
 
 N: No. of training data
@@ -174,6 +192,7 @@ However, brute-force grid search is time consuming. We should have a high-level 
 So, before doing any Machine Learning with SVM, we should address these questions.
 
 - How do we choose the most suitable model between LinearSVC and SVC?
+
 - If SVC is suitable, then how do we choose the optimal kernel (usually between polynomial and RBF)?
 
 
@@ -181,7 +200,9 @@ So, before doing any Machine Learning with SVM, we should address these question
 # Guideline (Rough) to Choose the Suitable Model Based on the Data
 
 - N is very large but d is small ($N > d$): LinearSVC
+
 - d is large relative to N ($d \geq N$): LinearSVC
+
 - N is small to medium and d small ($N > d$): SVC with Gaussian RBF kernel
 
 
@@ -216,4 +237,5 @@ Thus, we should standardize the data before training.
 We will consider two cases.
 
 - Data doesn't have outlier
+
 - Data has outliers
