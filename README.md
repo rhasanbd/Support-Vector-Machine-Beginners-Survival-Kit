@@ -44,6 +44,10 @@ There are 5 notebooks on SVM based classifiers.
 3. Support Vector Machine-3-Gaussian RBF Kernel
         
         -- In depth investigation of Gaussian RBF Kernel (how to fine tune the hyperparameters)
+        
+4. Support Vector Machine-4-Multiclass Classification
+        
+        -- Multiclass classification using the SVC class that implements the One-versus-One (OvO) technique
 
 Finally, we will apply SVM on **two application scenarios**. We will see that these two applications require two very different SVM algorithms (linear and complex models). We will conduct in dept investigations on these two models in the context of these two applications.
 
