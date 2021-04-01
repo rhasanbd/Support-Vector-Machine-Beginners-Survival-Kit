@@ -29,31 +29,35 @@ To understand different SVM algorithms and approaches, we will consider several 
 
 
 
-## Index for the Notebook Series on SVM Classifier
+## Index for the Notebook Series on SVM 
 
-There are 5 notebooks on SVM based classifiers.
+There are 7 notebooks on SVM based classifiers.
 
-1. Support Vector Machine-1-Linearly Separable Data
+1. Support Vector Machine-0-Bird's-eye View
+        
+        -- A bird's-eye view representation of the main algorithms of the Support Vector Machine (SVM) model for solving binary classification problems. 
+
+2. Support Vector Machine-1-Linearly Separable Data
         
         -- Hard margin & soft margin classifier using the LinearSVC model
 
-2. Support Vector Machine-2-Nonlinear Data
+3. Support Vector Machine-2-Nonlinear Data
         
         -- Polynomial models with LinearSVC and Kernelized SVM (Polynomial & Gaussian RBF kernel)
 
-3. Support Vector Machine-3-Gaussian RBF Kernel
+4. Support Vector Machine-3-Gaussian RBF Kernel
         
         -- In depth investigation of Gaussian RBF Kernel (how to fine tune the hyperparameters)
         
-4. Support Vector Machine-4-Multiclass Classification
+5. Support Vector Machine-4-Multiclass Classification
         
         -- Multiclass classification using the SVC class that implements the One-versus-One (OvO) technique
 
 Finally, we will apply SVM on **two application scenarios**. We will see that these two applications require two very different SVM algorithms (linear and complex models). We will conduct in dept investigations on these two models in the context of these two applications.
 
-4. Application 1 - Image Classification (Gaussian RBF model performs well & why)
+6. Application 1 - Image Classification (Gaussian RBF model performs well & why)
 
-5. Application 2 - Text Classification (LinearSVC performs well & why)
+7. Application 2 - Text Classification (LinearSVC performs well & why)
 
 
 
