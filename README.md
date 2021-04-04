@@ -52,12 +52,23 @@ There are 7 notebooks on SVM based classifiers.
 5. Support Vector Machine-4-Multiclass Classification
         
         -- Multiclass classification using the SVC class that implements the One-versus-One (OvO) technique
+        
+        
+6. Support Vector Machine-5-Stochastic Gradient Descent-Linear Data
+
+        -- The SGD algorithm for the SVM model to solve a binary classification problem on a linearly separable dataset
+
+
+7. Support Vector Machine-6-Stochastic Gradient Descent-Nonlinear Data
+
+        -- The SGD algorithm for the SVM model to solve a binary classification problem on a linearly non-separable dataset
+        
 
 Finally, we will apply SVM on **two application scenarios**. We will see that these two applications require two very different SVM algorithms (linear and complex models). We will conduct in dept investigations on these two models in the context of these two applications.
 
-6. Application 1 - Image Classification (Gaussian RBF model performs well & why)
+8. Application 1 - Image Classification (Gaussian RBF model performs well & why)
 
-7. Application 2 - Text Classification (LinearSVC performs well & why)
+9. Application 2 - Text Classification (LinearSVC performs well & why)
 
 
 
