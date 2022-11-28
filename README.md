@@ -150,7 +150,7 @@ Here:
 
 The Hinge loss function varies between 0 and $(1 - y_i(\vec{w}^T.\vec{x}_i + b))$. It represents the error/loss due to misclassification.
 
-<img src="https://cse.unl.edu/~hasan/SVM1.png" width=400 height=300>
+<img src="https://engineering.unl.edu/images/uploads/SVM1.png" width=400 height=300>
 
 Observe that the Hinge loss or cost function of SVM is similar to the Linear Regression and Logistic Regression regularized cost function.
 
